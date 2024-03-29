@@ -9,34 +9,38 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
+# 用于配置整个网站的环境和功能，核心配置必须有项目路径，密钥配置，域名访问权限，app列表，中间件，资源文件，模板配置，数据库的连接方式
 
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+# 项目路径
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# 密钥配置
+# 主要用于重要的数据加密处理，提高项目的安全性，避免遭到攻击者的恶意破坏，密钥主要用于用户密码， CSRF机制，会话Session等数据加密
 SECRET_KEY = 'django-insecure-k$4x^a16o@#bh@qv6u47grqutp$r(x!m44#2#^6yn+%wbhm+e@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# 开发时使用True，正式发布时使用False
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+# 允许访问的域名，在Debug为True时，不能为空，需填入域名
+ALLOWED_HOSTS = ["ryegrass.azurewebsites.net"]
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.admin',  # 管理后台
+    'django.contrib.auth',  # 认证系统
+    'django.contrib.contenttypes',  # 内容类型，所有的Model元数据
+    'django.contrib.sessions',  # 会话功能，用于标识当前访问网站的用户身份，记录相关用户信息
+    'django.contrib.messages',  # 消息提示功能
+    'django.contrib.staticfiles',  # 查找静态资源路径
     "App01.apps.App01Config"
 ]
 
@@ -71,7 +75,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'DjangoLearning.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -81,7 +84,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -101,7 +103,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -113,11 +114,23 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# 设置静态资源文件集合
+STATICFILES_DIRS = [
+    BASE_DIR / "App01/static"
+]
+
+# 设置静态资源文件路径，项目发布时，需要将静态资源文件收集到STATIC_ROOT路径下(collectstatic)
+STATIC_ROOT = BASE_DIR / "static"
+
+# 设置媒体路由
+MEDIA_URL = 'media/'
+# 设置媒体目录的完整路径
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

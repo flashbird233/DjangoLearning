@@ -6,4 +6,3 @@ from django.shortcuts import render
 # 用于编写web应用视图，接收数据，处理数据，与model（模型），Template（模板）交互，返回应答
 def hello_world(request):
     return render(request, "hello_world.html")
-

@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-k$4x^a16o@#bh@qv6u47grqutp$r(x!m44#2#^6yn+%wbhm+e@
 DEBUG = False
 
 # 允许访问的域名，在Debug为True时，不能为空，需填入域名
-ALLOWED_HOSTS = ["ryegrass.azurewebsites.net"]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -58,9 +58,10 @@ ROOT_URLCONF = 'DjangoLearning.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',  # 模板引擎
+        'DIRS': [BASE_DIR / 'templates',
+                 BASE_DIR / 'App01/templates']
+        ,  # 模板文件路径
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

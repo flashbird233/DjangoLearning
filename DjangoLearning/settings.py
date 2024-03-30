@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-k$4x^a16o@#bh@qv6u47grqutp$r(x!m44#2#^6yn+%wbhm+e@
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # 开发时使用True，正式发布时使用False
-DEBUG = True
+DEBUG = False
 
 # 允许访问的域名，在Debug为True时，不能为空，需填入域名
 ALLOWED_HOSTS = ["*"]

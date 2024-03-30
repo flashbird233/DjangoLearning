@@ -25,7 +25,8 @@ import App01.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello_world/', App01.views.hello_world),
-    path('blog/<int:blog_id>', App01.views.blog),
+    path('blog/<int:blog_id>', App01.views.blog),  # 定义一个带参数的URL
+    path('', App01.views.hello_world),  # 默认访问路径
     # 设置媒体文件的路由地址
     re_path(r'media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}, name="media")
 ]

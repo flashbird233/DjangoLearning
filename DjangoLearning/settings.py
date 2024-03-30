@@ -44,16 +44,25 @@ INSTALLED_APPS = [
     "App01.apps.App01Config"
 ]
 
+# 中间件, 是一个用来处理请求和响应的框架，是一个轻量级的、底层的系统级别的插件系统，用于全局范围内改变Django的输入或输出
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',  # 安全中间件，用于处理请求和响应的安全问题
+    'django.contrib.sessions.middleware.SessionMiddleware',  # 会话中间件，用于处理会话相关的功能
+    'django.middleware.common.CommonMiddleware',  # 通用中间件，用于处理请求和响应的通用问题，规范化请求内容
+    'django.middleware.csrf.CsrfViewMiddleware',  # CSRF中间件，用于处理CSRF相关的功能，开启CSRF功能
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # 认证中间件，用于处理认证相关的功能，开启用户认证功能
+    'django.contrib.messages.middleware.MessageMiddleware',  # 消息中间件，用于处理消息相关的功能，开启消息提示功能
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',  # XFrameOptions中间件，防止恶意程序单击劫持
+    # 自定义中间件（主要的是process_request和process_response方法），在自己定义中间件时，必须继承MiddlewareMixin
+    # process_request(self, request)：在请求到达视图(views)之前调用
+    # process_view(self, request, callback, callback_args, callback_kwargs)：在请求到达视图之前调用，但是会在process_request之后调用
+    # process_template_response(self, request, response)：在视图函数返回响应之后，模板渲染之前调用
+    # 该方法对视图函数返回值有要求，必须是一个含有render方法的对象，才会执行此方法
+    # process_response(self, request, response)：在视图函数返回响应之后调用，请求执行完成，返回页面前会执行
+    'App01.mymid.mid1.Mid1',
 ]
 
+# 指定了当前项目的根URL配置文件，是路由系统的入口
 ROOT_URLCONF = 'DjangoLearning.urls'
 
 TEMPLATES = [
@@ -74,6 +83,7 @@ TEMPLATES = [
     },
 ]
 
+# 项目部署时，Django的内置服务器使用的WSGI应用程序对象的完整Python路径
 WSGI_APPLICATION = 'DjangoLearning.wsgi.application'
 
 # Database
@@ -81,14 +91,18 @@ WSGI_APPLICATION = 'DjangoLearning.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ryegrass-database',
+        'USER': 'root',
+        'PASSWORD': 'qwe123zxc',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
-
+# 设置一个支持拔插的密码验证器，且可以一次性配置多个，Django会通过这些内置组件来避免用户设置的密码等级不足的问题
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -109,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Australia/Melbourne'
 
 USE_I18N = True
 

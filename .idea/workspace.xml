@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6487c60-4c9b-4337-af74-1cd952e4d458" name="更改" comment="Close the Debug">
+    <list default="true" id="b6487c60-4c9b-4337-af74-1cd952e4d458" name="更改" comment="Changed the database settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoLearning/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoLearning/settings.py" afterDir="false" />
     </list>
@@ -112,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711685636306</updated>
       <workItem from="1711685638930" duration="13304000" />
-      <workItem from="1711774980002" duration="8265000" />
+      <workItem from="1711774980002" duration="8702000" />
     </task>
     <task id="LOCAL-00001" summary="Created a new Application">
       <option name="closed" value="true" />
@@ -178,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711789950974</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Changed the database settings">
+      <option name="closed" value="true" />
+      <created>1711790371504</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711790371504</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +200,7 @@
     <MESSAGE value="Added Blog tests" />
     <MESSAGE value="Set a default url" />
     <MESSAGE value="Close the Debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Close the Debug" />
+    <MESSAGE value="Changed the database settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the database settings" />
   </component>
 </project>

@@ -89,6 +89,7 @@ WSGI_APPLICATION = 'DjangoLearning.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# local database
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -100,13 +101,14 @@ WSGI_APPLICATION = 'DjangoLearning.wsgi.application'
 #     }
 # }
 
+# server database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ryegrass-database',
         'USER': 'jnhhpcgdav',
         'PASSWORD': 'TP30ryegrass',
-        'HOST': 'localhost',
+        'HOST': 'ryegrass-server.mysql.database.azure.com',
         'PORT': '3306',
     }
 }

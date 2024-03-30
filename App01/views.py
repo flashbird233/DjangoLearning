@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
 
@@ -7,3 +8,7 @@ from django.shortcuts import render
 def hello_world(request):
     print("页面请求处理中")
     return render(request, "app01page.html")
+
+
+def blog(request, blog_id):
+    return HttpResponse("博客ID：%s" % blog_id)

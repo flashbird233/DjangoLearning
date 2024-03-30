@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6487c60-4c9b-4337-af74-1cd952e4d458" name="更改" comment="Closed ssl on the server,&#10;Added ssl in the local">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b6487c60-4c9b-4337-af74-1cd952e4d458" name="更改" comment="Closed ssl on the server,&#10;Commend ssl in local">
       <change beforePath="$PROJECT_DIR$/DjangoLearning/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoLearning/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711685636306</updated>
       <workItem from="1711685638930" duration="13304000" />
-      <workItem from="1711774980002" duration="17519000" />
+      <workItem from="1711774980002" duration="17812000" />
     </task>
     <task id="LOCAL-00001" summary="Created a new Application">
       <option name="closed" value="true" />
@@ -216,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711804313002</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Closed ssl on the server,&#10;Commend ssl in local">
+      <option name="closed" value="true" />
+      <created>1711805612468</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711805612468</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +238,7 @@
     <MESSAGE value="Close the Debug" />
     <MESSAGE value="Changed the database settings" />
     <MESSAGE value="Closed ssl on the server,&#10;Added ssl in the local" />
-    <option name="LAST_COMMIT_MESSAGE" value="Closed ssl on the server,&#10;Added ssl in the local" />
+    <MESSAGE value="Closed ssl on the server,&#10;Commend ssl in local" />
+    <option name="LAST_COMMIT_MESSAGE" value="Closed ssl on the server,&#10;Commend ssl in local" />
   </component>
 </project>

@@ -110,11 +110,11 @@ DATABASES = {
         'PASSWORD': 'TP30ryegrass',
         'HOST': 'ryegrass-server.mysql.database.azure.com',
         'PORT': '3306',
-        # 'OPTIONS': {
-        #     'ssl': {
-        #         'ca': BASE_DIR / 'DigiCertGlobalRootCA.crt.pem'
-        #     }
-        # }
+        'OPTIONS': {
+            'ssl': {
+                'ca': BASE_DIR / 'DigiCertGlobalRootCA.crt.pem'
+            }
+        }
     }
 }
 

@@ -105,7 +105,7 @@ WSGI_APPLICATION = 'DjangoLearning.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ryegrass-database',
+        'NAME': 'ryegrassdb',
         'USER': 'jnhhpcgdav',
         'PASSWORD': 'TP30ryegrass',
         'HOST': 'ryegrass-server.mysql.database.azure.com',
